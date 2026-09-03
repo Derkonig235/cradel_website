@@ -1,0 +1,701 @@
+/* =========================================
+   CRADEL - STYLES PRINCIPAUX
+========================================= */
+
+/* ---------- VARIABLES ---------- */
+:root {
+    --primary-color: #4f9657;
+    --primary-dark: #2f6236;
+    --primary-light: #eaf4eb;
+    --secondary-color: #7fb685;
+
+    --white: #ffffff;
+    --background: #f8faf8;
+    --text-color: #243027;
+    --text-light: #66706a;
+    --border-color: #e2e8e3;
+
+    --container-width: 1200px;
+
+    --shadow: 0 10px 30px rgba(35, 65, 40, 0.08);
+
+    --transition: all 0.3s ease;
+}
+
+
+/* ---------- RÉINITIALISATION ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ---------- CLASSES GÉNÉRALES ---------- */
+.container {
+    width: min(90%, var(--container-width));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-light {
+    background-color: var(--background);
+}
+
+.section-green {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.section-eyebrow {
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.section-heading p:not(.section-eyebrow) {
+    color: var(--text-light);
+}
+
+.section-heading-light .section-eyebrow {
+    color: #d7edd9;
+}
+
+.section-heading-light p:not(.section-eyebrow) {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.section-action {
+    margin-top: 45px;
+    text-align: center;
+}
+
+
+/* =========================================
+   BOUTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 26px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--primary-dark);
+}
+
+.btn-white:hover {
+    background-color: #f0f5f0;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.text-link:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 82px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 165px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-contact {
+    padding: 10px 18px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color) !important;
+}
+
+.nav-contact:hover {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: var(--text-color);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    padding: 95px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f4f8f4 100%
+        );
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-eyebrow {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin-bottom: 25px;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero-description {
+    max-width: 650px;
+    margin-bottom: 35px;
+    color: var(--text-light);
+    font-size: 1.08rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* =========================================
+   EMPLACEMENTS MÉDIAS TEMPORAIRES
+========================================= */
+
+.media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    padding: 25px;
+    border: 1px dashed #aebcaf;
+    background-color: #edf3ee;
+    color: #66706a;
+    text-align: center;
+}
+
+.hero-placeholder {
+    min-height: 460px;
+}
+
+.about-placeholder {
+    min-height: 500px;
+}
+
+.project-placeholder,
+.news-placeholder {
+    min-height: 230px;
+}
+
+
+/* =========================================
+   À PROPOS
+========================================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-content h2 {
+    margin-bottom: 22px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.about-content > p:not(.section-eyebrow) {
+    color: var(--text-light);
+}
+
+.identity-list {
+    margin-top: 35px;
+    border-top: 1px solid var(--border-color);
+}
+
+.identity-item {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.identity-item h3 {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.identity-item p {
+    color: var(--text-light);
+    font-size: 0.94rem;
+}
+
+
+/* =========================================
+   INTERVENTIONS
+========================================= */
+
+.interventions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.intervention-card {
+    min-height: 150px;
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.intervention-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.intervention-card h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   EXPERTISES
+========================================= */
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+}
+
+.expertise-card {
+    min-height: 230px;
+    padding: 35px;
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.expertise-card:hover {
+    background-color: var(--primary-light);
+}
+
+.expertise-number {
+    display: block;
+    margin-bottom: 45px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.expertise-card h3 {
+    max-width: 270px;
+    font-size: 1.18rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   NOTRE APPROCHE
+========================================= */
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.approach-item {
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.approach-item span {
+    display: block;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.approach-item h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.approach-item p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   ACTIONS & PROJETS
+========================================= */
+
+.section-heading-row {
+    max-width: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+}
+
+.section-heading-row .text-link {
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow);
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-category {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.project-content > p:last-child {
+    color: var(--text-light);
+    font-size: 0.94rem;
+}
+
+
+/* =========================================
+   ACTUALITÉS
+========================================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.news-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+}
+
+.news-content {
+    padding: 28px;
+}
+
+.news-date {
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.news-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.news-content > p:last-child {
+    color: var(--text-light);
+    font-size: 0.94rem;
+}
+
+
+/* =========================================
+   APPEL À L'ACTION
+========================================= */
+
+.cta-section {
+    padding: 80px 0;
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.cta-section .section-eyebrow {
+    color: #b8d8bb;
+}
+
+.cta-section h2 {
+    margin-bottom: 15px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cta-section p:not(.section-eyebrow) {
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #1f2b22;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 50px;
+    padding: 75px 0 55px;
+}
+
+.footer-brand img {
+    width: 190px;
+    margin-bottom: 22px;
+    background-color: var(--white);
+    padding: 8px;
+}
+
+.footer-brand p {
+    max-width: 330px;
+    margin-bottom: 12px;
+    font-size: 0.92rem;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 0.92rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom .container {
+    padding: 22px 0;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   ÉTAT MOBILE DU MENU
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .navbar.active .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
