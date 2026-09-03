@@ -3,34 +3,106 @@
 ========================================= */
 
 
-/* ---------- TABLETTES ---------- */
+/* =========================================
+   TABLETTES
+========================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
+
+    /* ---------- GÉNÉRAL ---------- */
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .header-container {
+        gap: 20px;
+    }
 
     .nav-links {
         gap: 14px;
     }
 
     .nav-links a {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
     }
 
-    .hero-container {
-        gap: 45px;
-    }
+
+    /* ---------- À PROPOS ---------- */
 
     .about-container {
         gap: 50px;
     }
 
-    .interventions-grid {
+    .identity-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .approach-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
     }
+
+
+    /* ---------- OBJECTIFS ---------- */
+
+    .objectives-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+
+    /* ---------- INTERVENTIONS ---------- */
+
+    .domains-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- EXPERTISES ---------- */
+
+    .expertise-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .expertise-process,
+    .project-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- PROJETS ---------- */
+
+    .projects-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- ACTUALITÉS ---------- */
+
+    .news-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- GALERIE ---------- */
+
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-page-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
 
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
@@ -39,73 +111,13 @@
 }
 
 
-/* ---------- PETITES TABLETTES ---------- */
+/* =========================================
+   MOBILES ET PETITES TABLETTES
+========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
-    .section {
-        padding: 80px 0;
-    }
-
-    .hero {
-        padding: 70px 0;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-content {
-        max-width: 750px;
-    }
-
-    .hero-placeholder {
-        min-height: 380px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-placeholder {
-        min-height: 400px;
-    }
-
-    .expertise-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card,
-    .news-card {
-        max-width: 650px;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .section-heading-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cta-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-}
-
-
-/* ---------- SMARTPHONES ---------- */
-
-@media (max-width: 600px) {
+    /* ---------- GÉNÉRAL ---------- */
 
     .container {
         width: min(92%, var(--container-width));
@@ -115,127 +127,384 @@
         padding: 65px 0;
     }
 
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
     .header-container {
         min-height: 72px;
     }
 
     .logo img {
-        width: 135px;
+        width: 105px;
+    }
+
+
+    /* ---------- MENU MOBILE ---------- */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        background-color: var(--white);
+
+        border-bottom: 1px solid var(--border-color);
+
+        display: none;
     }
 
     .navbar.active {
-        top: 72px;
+        display: block;
     }
 
-    .hero {
-        padding: 55px 0 65px;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-        letter-spacing: -1px;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
+    .nav-links {
         flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 20px 4%;
     }
 
-    .hero-buttons .btn {
+    .nav-links li {
         width: 100%;
     }
 
-    .hero-placeholder {
-        min-height: 280px;
+    .nav-links a {
+        display: block;
+
+        padding: 13px 0;
+
+        font-size: 0.95rem;
     }
+
+    .nav-contact {
+        display: inline-block !important;
+
+        margin-top: 10px;
+
+        padding: 12px 20px !important;
+    }
+
+
+    /* ---------- PAGE HERO ---------- */
+
+    .page-hero {
+        padding: 85px 0 75px;
+    }
+
+    .page-hero .container {
+        margin-left: auto;
+    }
+
+    .page-hero p:not(.section-eyebrow) {
+        font-size: 1rem;
+    }
+
+
+    /* ---------- PLACEHOLDERS ---------- */
 
     .about-placeholder {
-        min-height: 300px;
+        min-height: 320px;
     }
 
-    .section-heading {
-        margin-bottom: 40px;
-        text-align: left;
+
+    /* ---------- À PROPOS ---------- */
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
     }
 
-    .section-heading h2 {
-        font-size: 2rem;
-    }
-
-    .interventions-grid {
+    .identity-grid {
         grid-template-columns: 1fr;
     }
 
-    .intervention-card {
-        min-height: 120px;
+    .identity-card {
+        padding: 30px;
     }
 
-    .expertise-grid {
-        grid-template-columns: 1fr;
+
+    /* ---------- OBJECTIFS ---------- */
+
+    .objective-main {
+        padding: 35px;
     }
 
-    .expertise-card {
-        min-height: 190px;
-        padding: 28px;
+    .objective-main h3 {
+        font-size: 1.4rem;
     }
 
-    .expertise-number {
-        margin-bottom: 30px;
+    .objective-item {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
     }
+
+
+    /* ---------- APPROCHE ---------- */
 
     .approach-grid {
         grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 35px;
+    }
+
+
+    /* ---------- INTERVENTIONS ---------- */
+
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- EXPERTISE INTRO ---------- */
+
+    .expertise-intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
         gap: 30px;
     }
 
-    .section-heading-row {
+
+    /* ---------- EXPERTISES ---------- */
+
+    .expertise-page-intro {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .expertise-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-page-card {
+        padding: 30px;
+    }
+
+    .expertise-process,
+    .project-process {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 35px;
+    }
+
+
+    /* ---------- PROJETS ---------- */
+
+    .projects-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- ACTUALITÉS ---------- */
+
+    .news-page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-follow {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+
+    /* ---------- GALERIE ---------- */
+
+    .gallery-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
         margin-bottom: 35px;
     }
 
-    .project-content,
-    .news-content {
-        padding: 24px;
+    .gallery-grid {
+        grid-template-columns: 1fr;
     }
+
+    .gallery-item-large {
+        grid-column: span 1;
+    }
+
+    .gallery-item-large .gallery-placeholder {
+        min-height: 280px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact-page-grid {
+        gap: 50px;
+    }
+
+    .contact-form-container {
+        padding: 30px 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- COLLABORATION ---------- */
+
+    .collaboration-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- CTA ---------- */
 
     .cta-section {
         padding: 65px 0;
     }
 
-    .cta-section h2 {
-        font-size: 2rem;
+    .cta-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
     }
+
+
+    /* ---------- FOOTER ---------- */
 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 60px 0 40px;
-    }
 
-    .footer-brand img {
-        width: 170px;
-    }
+        gap: 35px;
 
-    .footer-bottom .container {
-        padding: 18px 0;
+        padding: 60px 0 45px;
     }
 
 }
 
 
-/* ---------- TRÈS PETITS ÉCRANS ---------- */
+/* =========================================
+   PETITS MOBILES
+========================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
-    .hero h1 {
-        font-size: 2rem;
+    /* ---------- GÉNÉRAL ---------- */
+
+    h1 {
+        font-size: 2.3rem;
     }
 
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    .header-container {
+        min-height: 68px;
+    }
+
+    .navbar {
+        top: 68px;
+    }
+
+    .logo img {
+        width: 95px;
+    }
+
+
+    /* ---------- PAGE HERO ---------- */
+
+    .page-hero {
+        padding: 70px 0 60px;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section {
+        padding: 55px 0;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
+    .identity-card,
+    .domain-card,
+    .expertise-page-card,
+    .collaboration-card {
+        padding: 25px;
+    }
+
+
+    /* ---------- OBJECTIFS ---------- */
+
+    .objective-main {
+        padding: 30px 25px;
+    }
+
+
+    /* ---------- PROJETS ET ACTUALITÉS ---------- */
+
+    .project-page-content,
+    .news-page-content {
+        padding: 25px;
+    }
+
+
+    /* ---------- FORMULAIRE ---------- */
+
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+
+
+    /* ---------- BOUTONS ---------- */
+
     .btn {
-        padding: 0 18px;
-        font-size: 0.9rem;
+        width: 100%;
+
+        padding: 14px 20px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-brand img {
+        width: 120px;
     }
 
 }
